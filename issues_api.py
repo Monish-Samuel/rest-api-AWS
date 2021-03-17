@@ -25,7 +25,7 @@ def issue_viewer():
     url = "https://api.github.com/repos/Monish-Samuel/rest-api/issues/"+numb1
     payload = {}
     headers = {
-        'Authorization': 'Bearer 74bce6969b425847c3c091ca160fef322ae9c4ec',
+        'Authorization': 'Bearer 5898e8dc8d2dff370e532da09f84549f93a9298f',
         'Cookie': '_octo=GH1.1.906356758.1615379192; logged_in=no'
     }
 
@@ -41,7 +41,7 @@ def issue_creator():
 
     payload = "{\r\n    \"title\": \""+title+"\",\r\n    \"body\": \""+body+"\"\r\n}"
     headers = {
-        'Authorization': 'Bearer 74bce6969b425847c3c091ca160fef322ae9c4ec',
+        'Authorization': 'Bearer 5898e8dc8d2dff370e532da09f84549f93a9298f',
         'Content-Type': 'application/json',
         'Cookie': '_octo=GH1.1.906356758.1615379192; logged_in=no'
     }
@@ -59,7 +59,7 @@ def issue_updater():
 
     payload = "{\r\n    \"title\": \""+title+"\",\r\n    \"body\": \""+body+"\"\r\n}"
     headers = {
-        'Authorization': 'Bearer 74bce6969b425847c3c091ca160fef322ae9c4ec',
+        'Authorization': 'Bearer 5898e8dc8d2dff370e532da09f84549f93a9298f',
         'Content-Type': 'application/json',
         'Cookie': '_octo=GH1.1.906356758.1615379192; logged_in=no'
     }
