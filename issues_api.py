@@ -25,8 +25,7 @@ def issue_viewer():
     url = "https://api.github.com/repos/Monish-Samuel/rest-api/issues/"+numb1
     payload = {}
     headers = {
-        'Authorization': 'Bearer 5898e8dc8d2dff370e532da09f84549f93a9298f',
-        'Cookie': '_octo=GH1.1.906356758.1615379192; logged_in=no'
+        'Authorization': 'Bearer 27044387df2a38d19cd405edc86b6a7b222f7652'
     }
 
     response = requests.request("GET", url, headers=headers, data=payload).json()
@@ -41,9 +40,8 @@ def issue_creator():
 
     payload = "{\r\n    \"title\": \""+title+"\",\r\n    \"body\": \""+body+"\"\r\n}"
     headers = {
-        'Authorization': 'Bearer 5898e8dc8d2dff370e532da09f84549f93a9298f',
-        'Content-Type': 'application/json',
-        'Cookie': '_octo=GH1.1.906356758.1615379192; logged_in=no'
+        'Authorization': 'Bearer 27044387df2a38d19cd405edc86b6a7b222f7652',
+        'Content-Type': 'application/json'
     }
 
     response = requests.request("POST", url, headers=headers, data=payload).json()
@@ -59,9 +57,8 @@ def issue_updater():
 
     payload = "{\r\n    \"title\": \""+title+"\",\r\n    \"body\": \""+body+"\"\r\n}"
     headers = {
-        'Authorization': 'Bearer 5898e8dc8d2dff370e532da09f84549f93a9298f',
-        'Content-Type': 'application/json',
-        'Cookie': '_octo=GH1.1.906356758.1615379192; logged_in=no'
+        'Authorization': 'Bearer 27044387df2a38d19cd405edc86b6a7b222f7652',
+        'Content-Type': 'application/json'
     }
 
     response = requests.request("PATCH", url, headers=headers, data=payload).json()
