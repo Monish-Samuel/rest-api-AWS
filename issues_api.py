@@ -22,10 +22,11 @@ def home_redirect_view():
 @app.route('/view', methods=['POST'])
 def issue_viewer():
     numb1 = request.form['number']
+    tok = request.form['token']
     url = "https://api.github.com/repos/Monish-Samuel/rest-api/issues/"+numb1
     payload = {}
     headers = {
-        'Authorization': 'Bearer 410dcea879d47b432eb567b368abb237f4982f25'
+        'Authorization': f'Bearer {tok}'
     }
 
     response = requests.request("GET", url, headers=headers, data=payload).json()
@@ -36,11 +37,12 @@ def issue_viewer():
 def issue_creator():
     title = request.form['title']
     body = request.form['issue']
+    tok = request.form['token']
     url = "https://api.github.com/repos/Monish-Samuel/rest-api/issues"
 
     payload = "{\r\n    \"title\": \""+title+"\",\r\n    \"body\": \""+body+"\"\r\n}"
     headers = {
-        'Authorization': 'Bearer 410dcea879d47b432eb567b368abb237f4982f25',
+        'Authorization': f'Bearer {tok}',
         'Content-Type': 'application/json'
     }
 
@@ -53,11 +55,12 @@ def issue_updater():
     numb = request.form['number']
     title = request.form['title']
     body = request.form['issue']
+    tok = request.form['token']
     url = "https://api.github.com/repos/Monish-Samuel/rest-api/issues/"+numb
 
     payload = "{\r\n    \"title\": \""+title+"\",\r\n    \"body\": \""+body+"\"\r\n}"
     headers = {
-        'Authorization': 'Bearer 410dcea879d47b432eb567b368abb237f4982f25',
+        'Authorization': f'Bearer {tok}',
         'Content-Type': 'application/json'
     }
 
