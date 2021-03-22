@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Docker Hub image Tagging'){
             steps{
-                bat 'docker tag github_api:latest monish7/github_api
+                bat 'docker tag github_api:latest monish7/github_api'
             }
         }
     }
