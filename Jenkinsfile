@@ -12,6 +12,11 @@ pipeline {
                 bat 'docker tag github_api:latest monish7/github_api'
             }
         }
+        stage('Docker Access'){
+            steps{
+                bat 'docker login'
+            }
+        }
         stage('Push Image To Repository'){
             steps{
                 bat 'docker push monish7/github_api'
